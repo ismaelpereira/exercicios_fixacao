@@ -10,13 +10,12 @@ int main()
     int numero, cont;
     printf("Digite um numero:\n");
     scanf("%d", &numero);
-    if(numero % 2 == 0){
-        for(cont = 0; cont < 20; cont++){
+    if(numero % 2 == 1){
+        numero += 1;
+    }
+    for(cont = 0; cont < 20; cont++){
             printf("%d: %d\n", cont+1, numero);
             numero += 2;
-        }
-    } else {
-        printf("Numero invalido, digite um numero par.\n");
     }
     system("pause");
 }
