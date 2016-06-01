@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+/*
+Faça um programa que leia um valor inteiro n  e escreva os 20 valores pares a partir de n.
+Observe que na digitação de n pode ser informado um número ímpar.  Para saber se um número é par obtenha o resto da divisão de n por 2 que deve ser zero, pelo operador módulo (%)
+Exemplo   resto = 7 % 2; resultará no valor 1 para atribuir à variável resto
+*/
+int main()
+{
+    int numero, cont;
+    printf("Digite um numero:\n");
+    scanf("%d", &numero);
+    if(numero % 2 == 0){
+        for(cont = 0; cont < 20; cont++){
+            printf("%d: %d\n", cont+1, numero);
+            numero += 2;
+        }
+    } else {
+        printf("Numero invalido, digite um numero par.\n");
+    }
+    system("pause");
+}
