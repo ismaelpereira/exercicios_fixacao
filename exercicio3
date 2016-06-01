@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+/*
+Faça um programa que leia vários números reais positivos (float) até que seja digitado um valor 0 (zero).
+O programa deve ao final escrever o maior e o menor valor digitado
+*/
+int main()
+{
+   float n=1, maior=0, maior2=0;  
+   printf("Para parar o programa, digite 0.\n");
+   while(n!=0){
+      printf("Digite um numero:");
+      scanf("%f", &n);
+      if(n>0){
+         if(maior==0){
+            maior = n;
+         } else if(n > maior){
+            maior2 = maior;
+            maior = n;
+         }
+      }
+   }
+   printf("\n");
+   printf("O maior valor digitado foi: %.2f\n", maior);
+   printf("O segundo maior valor digitado foi: %.2f\n", maior2);
+   system("pause");
+}
