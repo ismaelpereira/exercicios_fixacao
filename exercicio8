@@ -1,0 +1,28 @@
+#include <stdlib.h>
+#include <stdio.h>
+/*
+Faça um programa que leia vários números inteiros até seja informado um valor zero.
+O programa deve escrever os 3 menores valores distintos que foram digitados.
+
+*/
+int main(){
+   int n=1, menor=0, menor2=0, menor3=0;
+   while(n!=0){
+      printf("Digite um numero:\n");
+      scanf("%d", &n);
+      if(n==0){
+         break;
+      }
+      if(menor==0){
+         menor = n;
+      } else if(n<menor){
+         if(n<menor2 && menor>n){
+            menor3 = menor2;
+         }
+         menor2 = menor;
+         menor = n;
+      } 
+   }
+   printf("Os 3 menores valores sao: %d, %d, %d.\n", menor, menor2, menor3);
+   system("pause");
+}
