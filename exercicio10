@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/*
+Escreva um programa que leia um valor N inteiro e positivo e que calcula o valor aproximado de PI
+considerando N termos na equação: PI = 4 * ( 1 - 1/3 + 1/5 - 1/7 + 1/9 - 1/11 + 1/13 ... ).
+Exemplo  se 	N = 1   Pi  será 4             4 * 1
+		N = 2   Pi  será 2,667       4*(1- 1/3)			2 valores da série
+		N = 3   Pi  será 3,466       4*(1- 1/3 + 1/5)		3 valores da série
+		N = 4   Pi  será 2,895       4*(1- 1/3 + 1/5 - 1/7)       	4 valores da série
+*/
+int main(){
+	float cont=1, result=0, altera_sinal=1, soma =0;
+	int n=0;
+	printf("Digite um numero:\n");
+	scanf("%d", &n);
+	for (cont = 1; cont <= 2*n; cont+=2)
+	{
+		result +=4*(1/(cont * altera_sinal));
+		altera_sinal = altera_sinal * (-1);
+		soma+=result;
+		printf("%.4f\n", result);
+		
+	}
+	printf("Pi final e: %f\n", result);
+	system("pause");
+}
+
