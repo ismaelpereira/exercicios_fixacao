@@ -9,12 +9,12 @@ Observe que os valores se alternam entre positivos e negativos na série.
 
 */
 int main(){
-	float cont = 1, result = 0, altera_sinal = 1, cont2 = 1;
+	float cont=1, result=0, altera_sinal=1, cont2 = 1;
 	for (cont = 1; cont <= 20; cont+=2)
 	{
 		result += 1/cont * altera_sinal;
 		altera_sinal = altera_sinal * (-1);		
-		printf("%1.f º: %.4f\n",cont2, result);
+		printf("%1.f º: Soma parcial de %.4f e: %.4f\n",cont2, 1/cont, result);
 		cont2++;
 	}
 	system("pause");
