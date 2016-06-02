@@ -1,0 +1,30 @@
+/*Faça um programa que lê um valor N inteiro.
+Se N for negativo escreve a mensagem “valor negativo”, mas se N for zero ou positivo escrever o fatorial de N
+Lembrar que:
+O fatorial de zero é 1 (por definição)
+O fatorial de 1 é 1
+O fatorial de 2 é 2  	 (2! = 1x2)
+O fatorial de 3 é 6    	 (3! = 1x2x3)
+O fatorial de 4 é 24 	 (4! = 1x2x3x4)
+O fatorial de 5 é 120  (5! = 1x2x3x4x5)
+*/
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+int n=2,i=0,resultado=1;
+printf("Digite um numero:");
+scanf("%d",&n);
+if(n<0){
+printf("Valor negativo");
+}
+else if(n==0){
+printf("O resultado e 1");
+}
+else{
+for(i=1;i<=n;i++){
+resultado*=i;
+}
+printf("O fatorial de %d e %d\n",n,resultado);
+}
+system("pause");
+}
