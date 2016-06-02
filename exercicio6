@@ -1,0 +1,50 @@
+#include <stdlib.h>
+#include <stdio.h>
+/*
+Um professor de Educação Física quer fazer uma pesquisa com as alturas das pessoas de uma turma.  Ele quer saber:
+- a altura da mulher mais alta, 
+- a altura do homem mais baixo
+- a média de alturas dos homens
+- a média de altura das mulheres
+
+Faça um programa que leia uma altura de uma pessoa e o sexo, se é feminino (valor 0) ou masculino (valor 1).  
+O programa deve identificar pelo sexo a altura da mulher mais alta e a altura do homem mais baixo e a média de alturas de homens e mulheres. 
+Como exemplo, para os homens deve somar todas as alturas e determinar a média dividindo a soma pelo número de homens.
+O programa deve repetir a leitura de alturas até que seja digitada uma altura zero.
+*/
+int main(){
+   float maiormulher = 0, menorhomem = 0, mediahomem = 0, mediamulher = 0, altura = 1.0;
+   int sexo = 0, conth = 0, contm = 0;
+   while(altura != 0){
+      printf("Digite a altura:\n");
+      scanf("%f", &altura);
+      if(altura == 0){
+         break;
+      }
+      printf("Digite o sexo:(Feminino = 0, Masculino = 1)\n");
+      scanf("%d", &sexo);
+      if(sexo == 0 && maiormulher == 0){
+         maiormulher = altura;
+         mediamulher+= altura;
+         contm++;
+      } else if (sexo == 1 && menorhomem == 0){
+         menorhomem = altura;
+         mediahomem+= altura;
+         conth++;
+      } else if (sexo == 0){
+         mediamulher+= altura;
+         contm++;
+      } else if (sexo == 1){
+         mediahomem+= altura;
+         conth++;
+      } else {
+         printf("Erro. Sexo digitado errado.");
+      }
+      
+   }
+   printf("A altura da mulher mais alta e: %.2f\n", maiormulher);
+   printf("A altura do homem mais baixo e: %.2f\n", menorhomem);
+   printf("A media das alturas de homens e: %.2f\n", mediahomem/conth);
+   printf("A media das alturas de mulheres e: %.2f\n", mediamulher/contm);
+   system("pause");
+}
