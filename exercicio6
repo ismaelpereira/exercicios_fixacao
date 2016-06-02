@@ -23,11 +23,11 @@ int main(){
       }
       printf("Digite o sexo:(Feminino = 0, Masculino = 1)\n");
       scanf("%d", &sexo);
-      if(sexo == 0 && (maiormulher == 0 || maiormulher < h)){
+      if(sexo == 0 && (maiormulher == 0 || maiormulher < altura)){
          maiormulher = altura;
          mediamulher+= altura;
          contm++;
-      } else if (sexo == 1 && (menorhomem == 0 || menorhomem > h)){
+      } else if (sexo == 1 && (menorhomem == 0 || menorhomem > altura)){
          menorhomem = altura;
          mediahomem+= altura;
          conth++;
