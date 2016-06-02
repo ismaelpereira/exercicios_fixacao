@@ -12,7 +12,7 @@ for(i=1;i<=10;i++){
    resultado =(1.0/denominador)*sinal;
    soma+=resultado;
    printf("%.4f\n",resultado);
-   denominador=i+2;
+   denominador=denominador+2;
    sinal=sinal*(-1);
 }
 printf("\nA soma e: %.4f\n",soma);
